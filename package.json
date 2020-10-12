@@ -1,0 +1,31 @@
+{
+  "name": "note_taker",
+  "version": "1.0.0",
+  "description": "Note taker application",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test2",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asanchez325/note_taker.git"
+  },
+  "keywords": [
+    "Note",
+    "Taker"
+  ],
+  "author": "Alannah Sanchez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asanchez325/note_taker/issues"
+  },
+  "homepage": "https://github.com/asanchez325/note_taker#readme"
+}
