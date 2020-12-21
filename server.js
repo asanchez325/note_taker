@@ -1,15 +1,20 @@
 const express = require('express');
 const fs = require("fs");
 const path = require('path');
+const { notes } = require('./db/db');
 
-const PORT = process.env.PORT || 80;
+const apiRoutes = require("./routes/apiRoutes");
+const htmlRoutes = require("./routes/htmlRoutes");
+
+const PORT = process.env.PORT || 3001;
 const app = express ();
 
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
+app.use(express.static('public'));
+app.use("./apiRoutes");
+app.use("./htmlRoutes");
 
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
 
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
