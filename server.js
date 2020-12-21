@@ -10,8 +10,8 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 app.use(express.static('public'));
 
-require("./routes/apiRoutes/noteRoutes")(app);
-require("./routes/htmlRoutes/index")(app);
+require("./routes/apiRoutes.js")(app);
+require("./routes/htmlRoutes.js")(app);
 
 
 app.listen(PORT, () => {
